@@ -102,7 +102,7 @@ class GameWindow(QMainWindow):
                 self.num_images -= 1
                 if self.num_images == 0:
                     random.shuffle(self.pic_paths)
-                    QTimer.singleShot(500, partial(self.initGame, self.pic_paths, self.image_cache))
+                    QTimer.singleShot(500, partial(self.__init__, self.pic_paths, self.image_cache))
         self.stack_count=0
 
     def keyPressEvent(self, event):
